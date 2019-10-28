@@ -10,7 +10,7 @@ $(document).ready(function(){
           if(!$dropping) {
                 $dropping = true;
                 if(!$dropped) {
-                      $("#dropdown").animate({top: '70px'}, 300, function() {
+                      $("#dropdown").animate({top: '55px'}, 300, function() {
                            $dropped = true;
                            $dropping = false;
                      });

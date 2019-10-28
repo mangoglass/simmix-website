@@ -69,7 +69,7 @@
     --main-link-color: #1e88ff;
     --main-padding: 15px;
 
-    --nav-elem-padding: 15px;
+    --nav-elem-padding: 5px;
     --nav-elem-space: 30px;
     --nav-elems: 5;
 
@@ -129,7 +129,8 @@ a:hover {
 	overflow: hidden;
 	top: 0;
 	background: url("../img/topBar.png");
-	background-size: 300%;
+	background-size: 1000%;
+	z-index: 2;
 }
 
 #logo {
@@ -153,12 +154,12 @@ a:hover {
 
 #dropdown {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: -325px;
 	width: 100%;
 	right: 0px;
-	background-color: rgba(255,255,255,0.95);
-	z-index: 5;
+	background-color: rgba(25,25,25,0.8);
+	z-index: 1;
 }
 
 #imageContainer {
@@ -182,13 +183,21 @@ a:hover {
 	padding-top: 30px;
 }
 
+#textButton a {
+	display: block;
+	width: 170px;
+	margin: 0 auto;
+}
+
 #webshopCont {
+	width: 150px;
 	margin: 10px auto;
 	border: 2px solid;
 	border-radius: 5px;
 	padding: 10px;
 	width: 150px;
 	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #colorDivider {
@@ -224,6 +233,7 @@ a:hover {
 	margin-left: var(--nav-elem-space);
 	width: calc((100% / (var(--nav-elems))) - var(--nav-elem-space));
 	text-align: center;
+	text-bottom: center;
 }
 
 .navElem a {
@@ -234,7 +244,7 @@ a:hover {
 .navElem h6 {
 	margin: 0px;
 	font-size: 15px;
-	padding-top: 20px;
+	padding-top: 15px;
 }
 
 .navElem img{
@@ -244,9 +254,10 @@ a:hover {
 
 .dropText {
 	text-align: center;
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 	border-top: 1px solid gray;
+	font-size: 20px;
 }
 
 .contentBlock {
@@ -258,6 +269,69 @@ a:hover {
 	font-size: 50px;
 	text-align:center;
 	margin-top: 0px;
+}
+
+.personblock {
+	height: 320px;
+}
+
+.personImage {
+	width: 30%;
+	height: 270px;
+	float: left;
+}
+
+.personImage img {
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.personText {
+	width: 70%;
+	float: left;
+}
+
+.rightText {
+	text-align: right;
+}
+
+.normalimage {
+	display: block;
+}
+
+.altimage {
+	display: none;
+}
+
+.videoBlock {
+	height: 500px;
+}
+
+.videoContainer {
+	float:left;
+	width: 70%;
+}
+
+.videoContainer iframe {
+	height: 400px;
+	width: 80%;
+	display: block;
+	margin: 10px auto;
+}
+
+.videoTextContainer {
+	float:left;
+	width: 30%;
+}
+
+.gallery {
+	float:left;
+	width: 30%;
+}
+
+.feedback {
+	margin: 40px;
 }
 
 .tripple {
@@ -287,6 +361,24 @@ a:hover {
 
 /*<---Media Queries--->*/
 
+@media(min-width:1716px) {
+
+}
+@media(max-width:1715px) {
+	.contentBlock {
+		padding: 80px 15%;
+	}
+}
+
+@media(min-width:1396px) {
+
+}
+@media(max-width:1395px) {
+	.contentBlock {
+		padding: 80px 10%;
+	}
+}
+
 @media(min-width:1138px) {
 
 }
@@ -301,6 +393,10 @@ a:hover {
 
 	#textButton {
 		padding-top: 20px;
+	}
+	
+	.contentBlock {
+		padding: 80px 7%;
 	}
 }
 
@@ -337,6 +433,63 @@ a:hover {
     		padding: 10px;
 		font-size: 15px;
 	}
+	
+	.contentBlock {
+		padding: 40px 5%;
+	}
+	
+	.personblock {
+		height: 480px;
+	}
+	
+	.personImage {
+		width: 100%;
+		height: 200px;
+		float: none;
+	}
+	
+	.normalimage {
+		display: none;
+	}
+
+	.altimage {
+		display: block;
+	}
+
+	.personText {
+		width: 100%;
+		float: none;
+	}
+
+	.rightText {
+		text-align: left;
+	}
+
+	.videoBlock {
+		height: 680px;
+	}
+
+	.videoContainer {
+		float: none;
+		width: 100%;
+	}
+
+	.videoContainer iframe {
+		height: 400px;
+		width: 100%;
+		display: block;
+		margin: 10px auto;
+	}
+
+	.videoTextContainer {
+		float: none;
+		width: 100%;
+	}
+
+	.gallery {
+		float: none;
+		width: 100%;
+	}
 
 	#footer {
 		padding-left: 10px;
@@ -364,11 +517,15 @@ a:hover {
 		font-size: 12px;
 	}
 
+	#textButton a {
+		width: 120px;
+	}
+
 	#webshopCont {
+		width: 100px;
     	font-size: 12px;
 		border: 1px solid;
 		border-radius: 3px;
-		width: 100px;
 	}
 }
 
