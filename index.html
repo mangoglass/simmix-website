@@ -33,7 +33,7 @@
 							</a>
 						</div>
 						<div class="navElem navText">
-							<a href="#descriptionBlock"><h6>Description</h6></a>
+							<a href="#descriptionBlock"><h6>About SimMix</h6></a>
 						</div>
 						<div class="navElem navText">
 							<a href="#aboutUsBlock"><h6>About us</h6></a>
@@ -51,7 +51,7 @@
 				</div>
 				<div id="dropdown">
 					<div class="dropText">
-						<a href="#descriptionBlock"><h6>Description</h6></a>
+						<a href="#descriptionBlock"><h6>About SimMix</h6></a>
 					</div>
 					<div class="dropText">
 						<a href="#aboutUsBlock"><h6>About us</h6></a>
@@ -87,26 +87,43 @@
 
 			<div id="contentContainer"> 
 				<div class="contentBlock" id="descriptionBlock"> 
-					<h1> DESCRIPTION </h1>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-					incididunt ut labore et dolore magna aliqua. Cursus risus at ultrices mi tempus 
-					imperdiet nulla malesuada. Tincidunt arcu non sodales neque sodales ut etiam. 
-					Tortor consequat id porta nibh venenatis cras. Duis convallis convallis tellus 
-					id interdum velit laoreet id donec. <br>
-					Pellentesque massa placerat duis ultricies. Erat nam at lectus urna. Neque 
-					laoreet suspendisse interdum consectetur libero id faucibus nisl. Purus ut 
-					faucibus pulvinar elementum integer enim neque volutpat. Volutpat est velit 
-					egestas dui id ornare arcu odio ut. Integer feugiat scelerisque varius morbi 
-					enim nunc. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida 
-					cum. Eu augue ut lectus arcu bibendum at varius.
-					<br><br>
-					Neque gravida in fermentum et sollicitudin ac orci. Consectetur a erat nam at 
-					lectus urna duis. Suspendisse ultrices gravida dictum fusce ut placerat orci 
-					nulla. Vitae nunc sed velit dignissim sodales. Tincidunt praesent semper 
-					feugiat nibh sed. Rhoncus urna neque viverra justo nec ultrices dui sapien. <br>
-					In eu mi bibendum neque egestas congue. At tellus at urna condimentum mattis 
-					pellentesque id. Phasellus faucibus scelerisque eleifend donec pretium. Dolor 
-					sit amet consectetur adipiscing.
+					<h1> ABOUT SIMMIX </h1>
+					<h2>Goals and Motivation</h2>
+					SimMix is a collaborative 3D modeling software for virtual reality. It provides an intuitive interface for 3D modeling where the user easily gains an understanding of the entire three-dimensional object being modeled. It also allows multiple users to work on the same object and see each other's changes in real time, making collaboration effortless. <br><br>
+					SimMix aims to remove some of the everyday frustrations of expert modelers, as well as to provide an intuitive entrypoint for novice modelers. Virtual reality is a natural choice for displaying three-dimensional objects and makes modeling as natural as drawing in 3D. The collaboration feature lends itself well both to teams of experts and to teachers with students. <br><br>
+					In the scope of this project, we have developed a prototype 3D modeling tool with a few select tools. However, the project is open-source, allowing anyone to build on top of this tool to create a full-fledged 3D modeling program with all the tools an expert modeler might want.
+					
+					<h2>Technologies</h2>
+					Unity <br>
+					SteamVR <br>
+					HTC Vive <br>
+					GitHub
+					
+					<h2>Contributions</h2>
+					The main graphics contribution of our project is the custom mesh system. We created a custom mesh data structure allowing us to conduct low-level operations in real time. We then added bindings from our custom data structure to Unity’s Mesh Structure. Operators include scale, translate and rotate as well as more advanced mesh modification operators such as extrude, inset and duplicate. In addition, the user may change the material of the objects. These steps all required an understanding of low-level graphics concepts and geometry. <br><br>
+					The interaction contributions of our project includes a new interface for 3D modeling, relying on hand controllers and movements rather than a mouse and keyboard as in traditional modeling software. We have considered and tested all aspects of the interface, from using a tool, to switching between tools, to navigating in the space. Some tools have additional novel interaction methods, significantly the material picker. Throughout the project, we have taken collaboration into consideration, thinking not only about how a single user might prefer a feature, but also how it will appear to their teammates. 
+
+					<h2>Challenges and Obstacles</h2>
+					The biggest obstacle we faced during the project was the networking. We couldn’t use the built-in Unity networking tools out of the box as we had custom data structures and classes. We had to heavily modify the tools just to show something over the network. <br><br>
+					The second obstacle was designing the interaction methods of the tools. It was very different from the programming challenges we are used to facing. We couldn’t just write some code and be done with it. It was an iterative process with lots of user feedback with a foundation of known methods. <br><br>
+					A more practical challenge we faced was the availability of VR hardware. Most of us don’t have VR headsets at home, which forced us to visit the VIC-studio to test our implementations. At first, this was not a problem because most code could be tested on a monitor but as the focus changed from graphics to interaction this became a bigger problem.
+				
+					<h2>Related Work</h2>
+						- Blender:<br><br>
+						
+						- <b><a href="https://dl.acm.org/citation.cfm?id=3173863">Communication Behavior in Embodied Virtual Reality</a></b> <br>
+						Harrison Jesse Smith, and Michael Neff <br>
+						2018 <br><br>
+						
+						- <b><a href="https://www.sciencedirect.com/science/article/pii/S2288430018300666">UI design for high learning performance in VR-based architectural applications</a></b> <br>
+						Chengyu Sun, Wei Hu, Diqiong Xu<br>
+						2019<br><br>
+
+				
+					<h2>Lessons learned</h2>
+					The biggest lesson we had to learn was to prioritize among tasks. In a creation tool like this one, there are countless features that would be great to have, and many that we even considered essential. However, after an early demo we found that users much preferred a small number of well-polished tools, and rarely requested additional ones. We had to narrow down our mile-long list of features to just a handful, and focus on making those work really well. <br><br>
+					We also learned that networking is something that should be built into the application from the very beginning. Any data structure and program flow should be designed with networking in mind. Adding networking at a later stage in the development made this already difficult task even harder.
+
 				</div>
 				<div class="contentBlock" id="aboutUsBlock"> 
 					<h1> ABOUT US </h1>
@@ -129,7 +146,7 @@
 							<img src="img/rodrigo.png">
 						</div>
 						<div class="personText rightText"> 
-							<h2>Rodrigo</h2>
+							<h2>Rodrigo Retuerto</h2>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 							Nunc sed nulla quis dolor interdum posuere ac et neque. <br>
 							Nam dapibus urna in magna varius, vitae luctus sem dignissim. <br>
@@ -147,12 +164,11 @@
 						</div>
 						<div class="personText"> 
 							<h2>Alvaro Ortega Matsson</h2>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nunc sed nulla quis dolor interdum posuere ac et neque. <br>
-							Nam dapibus urna in magna varius, vitae luctus sem dignissim. <br>
-							Maecenas in efficitur metus. Curabitur lobortis turpis nec ligula 
-							euismod molestie pulvinar id tellus. Integer sed erat vitae arcu 
-							convallis lacinia in egestas est.
+							I am the project leader and the one responsible for the networking 
+							implementations of the software. My job is to make sure collaboration 
+							between two users works seamlessly and effectively. I also developed 
+							the first version of the circle menu and the additional spectator 
+							camera.
 						</div>
 					</div>
 					<div class="personblock">
@@ -161,12 +177,15 @@
 						</div>
 						<div class="personText rightText"> 
 							<h2>Tom Axblad</h2>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nunc sed nulla quis dolor interdum posuere ac et neque. <br>
-							Nam dapibus urna in magna varius, vitae luctus sem dignissim. <br>
-							Maecenas in efficitur metus. Curabitur lobortis turpis nec ligula 
-							euismod molestie pulvinar id tellus. Integer sed erat vitae arcu 
-							convallis lacinia in egestas est.
+							I am the expert when it comes to VR, so I am responsible for most VR 
+							related code and work. However, my responsibilities in this project are 
+							a bit wider than just the VR-implementation. Some other implementations 
+							I did was for example: <br> 
+							The code foundation, function states, tools system, 
+							input systems, finalization of the menu, global variable system, 
+							and some of the tools and functions, such as; user scaling tool, 
+							and teleport function. <br>
+							I also made the website you are looking at right now!
 						</div>
 						<div class="personImage normalimage"> 
 							<img src="img/tom.png">
@@ -178,7 +197,7 @@
 					<h1> MEDIA </h1>
 					<div class="videoBlock">
 						<div class="videoContainer">
-							<iframe src="https://www.youtube-nocookie.com/embed/mZvRePXcYAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/8loMxmp-4x4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 						
 						<div class="videoTextContainer">
@@ -195,18 +214,16 @@
 					
 					<div class="videoBlock">
 						<div class="videoContainer">
-							<iframe src="https://www.youtube-nocookie.com/embed/mZvRePXcYAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/4wFQd40rDPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 						
 						<div class="videoTextContainer">
 							<h2>DEMO REEL</h2>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nunc sed nulla quis dolor interdum posuere ac et neque. <br>
-							Nam dapibus urna in magna varius, vitae luctus sem dignissim. <br>
-							Maecenas in efficitur metus. Curabitur lobortis turpis nec ligula 
-							euismod molestie pulvinar id tellus. Integer sed erat vitae arcu 
-							convallis lacinia in egestas est. Suspendisse dictum ligula vel urna 
-							blandit mattis. Aliquam rutrum venenatis tempus.
+							In this video, Tom shows some of the core functionality that exists 
+							right now in the SimMix project. Tools such as translate, rotate, copy, 
+							inset, and extrude can be seen. Another feature displayed is the combination 
+							of user scaling and translation, which lets you take an object up into 
+							the sky!
 						</div>
 					</div>
 					
@@ -245,7 +262,7 @@
 				Made by Tom Axblad © 2019
 				</div>
 				<div class="tripple">
-					<div> Top / Description / About us / Media / Feedback </div>
+					<div> Top / About SimMix / About us / Media / Feedback </div>
 				</div>
 				<div class="tripple">
 					<img id="footerLogo" src="img/logo.png"/>

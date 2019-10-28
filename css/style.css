@@ -66,7 +66,7 @@
 	--color-complement-3: #FF0000;
 	--color-complement-4: #C80000;
 
-    --main-link-color: #1e88ff;
+    --main-link-color: #0061b0;
     --main-padding: 15px;
 
     --nav-elem-padding: 5px;
@@ -108,7 +108,7 @@ a:active {
 
 a:visited {
     text-decoration: none;
-    color: var(--color-secondary-2-0);
+    color: var(--main-link-color);
 }
 
 a:hover {
@@ -197,7 +197,7 @@ a:hover {
 	padding: 10px;
 	width: 150px;
 	font-size: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 #colorDivider {
